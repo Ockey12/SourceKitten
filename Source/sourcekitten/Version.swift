@@ -8,7 +8,9 @@ extension SourceKitten {
         static var value: String { SourceKittenFramework.Version.current.value }
 
         mutating func run() throws {
-            print(Self.value)
+            #if DEBUG
+                print(Self.value)
+            #endif
         }
     }
 }

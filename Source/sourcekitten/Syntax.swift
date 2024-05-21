@@ -13,12 +13,16 @@ extension SourceKitten {
         mutating func run() throws {
             if !file.isEmpty {
                 if let file = File(path: file) {
-                    print(try SyntaxMap(file: file))
+                    #if DEBUG
+                        print(try SyntaxMap(file: file))
+                    #endif
                     return
                 }
                 throw SourceKittenError.readFailed(path: file)
             }
-            print(try SyntaxMap(file: File(contents: text)))
+            #if DEBUG
+                print(try SyntaxMap(file: File(contents: text)))
+            #endif
         }
     }
 }

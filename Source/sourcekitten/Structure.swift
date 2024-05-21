@@ -13,13 +13,17 @@ extension SourceKitten {
         mutating func run() throws {
             if !file.isEmpty {
                 if let file = File(path: file) {
-                    print(try SourceKittenFramework.Structure(file: file))
+                    #if DEBUG
+                        print(try SourceKittenFramework.Structure(file: file))
+                    #endif
                     return
                 }
                 throw SourceKittenError.readFailed(path: file)
             }
             if !text.isEmpty {
-                print(try SourceKittenFramework.Structure(file: File(contents: text)))
+                #if DEBUG
+                    print(try SourceKittenFramework.Structure(file: File(contents: text)))
+                #endif
                 return
             }
             throw SourceKittenError.invalidArgument(

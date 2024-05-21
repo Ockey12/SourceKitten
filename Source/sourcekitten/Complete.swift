@@ -59,7 +59,9 @@ extension SourceKitten {
             if #available(macOS 10.13, *) {
                 outputOptions.insert(sortKeys ? .sortedKeys : [])
             }
-            print(toJSON(completionItems.map { $0.dictionaryValue.bridge() }, options: outputOptions))
+            #if DEBUG
+                print(toJSON(completionItems.map { $0.dictionaryValue.bridge() }, options: outputOptions))
+            #endif
         }
     }
 }

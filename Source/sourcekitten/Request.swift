@@ -21,7 +21,9 @@ extension SourceKitten {
             }
 
             let request = SourceKittenFramework.Request.yamlRequest(yaml: yaml)
-            print(toJSON(toNSDictionary(try request.send())))
+            #if DEBUG
+                print(toJSON(toNSDictionary(try request.send())))
+            #endif
         }
     }
 }
