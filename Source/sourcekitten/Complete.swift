@@ -60,7 +60,7 @@ extension SourceKitten {
                 outputOptions.insert(sortKeys ? .sortedKeys : [])
             }
             #if DEBUG
-                print(toJSON(completionItems.map { $0.dictionaryValue.bridge() }, options: outputOptions))
+
             #endif
         }
     }

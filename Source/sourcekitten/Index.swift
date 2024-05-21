@@ -20,7 +20,7 @@ extension SourceKitten {
             let absoluteFile = file.bridge().absolutePathRepresentation()
             let request = SourceKittenFramework.Request.index(file: absoluteFile, arguments: compilerargs)
             #if DEBUG
-                print(toJSON(toNSDictionary(try request.send())))
+
             #endif
         }
     }

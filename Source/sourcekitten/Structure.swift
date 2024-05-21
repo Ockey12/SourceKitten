@@ -14,7 +14,7 @@ extension SourceKitten {
             if !file.isEmpty {
                 if let file = File(path: file) {
                     #if DEBUG
-                        print(try SourceKittenFramework.Structure(file: file))
+
                     #endif
                     return
                 }
@@ -22,7 +22,7 @@ extension SourceKitten {
             }
             if !text.isEmpty {
                 #if DEBUG
-                    print(try SourceKittenFramework.Structure(file: File(contents: text)))
+
                 #endif
                 return
             }

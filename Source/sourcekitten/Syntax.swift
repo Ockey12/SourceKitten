@@ -14,14 +14,14 @@ extension SourceKitten {
             if !file.isEmpty {
                 if let file = File(path: file) {
                     #if DEBUG
-                        print(try SyntaxMap(file: file))
+
                     #endif
                     return
                 }
                 throw SourceKittenError.readFailed(path: file)
             }
             #if DEBUG
-                print(try SyntaxMap(file: File(contents: text)))
+
             #endif
         }
     }

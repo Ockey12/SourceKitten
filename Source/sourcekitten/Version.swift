@@ -9,7 +9,7 @@ extension SourceKitten {
 
         mutating func run() throws {
             #if DEBUG
-                print(Self.value)
+
             #endif
         }
     }

@@ -22,7 +22,7 @@ extension SourceKitten {
 
             let request = SourceKittenFramework.Request.yamlRequest(yaml: yaml)
             #if DEBUG
-                print(toJSON(toNSDictionary(try request.send())))
+
             #endif
         }
     }

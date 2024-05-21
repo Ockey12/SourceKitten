@@ -21,7 +21,7 @@ extension SourceKitten {
             }
             let request = SourceKittenFramework.Request.moduleInfo(module: module, arguments: compilerargs)
             #if DEBUG
-                print(toJSON(toNSDictionary(try request.send())))
+
             #endif
         }
     }

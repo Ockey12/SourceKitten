@@ -256,7 +256,7 @@ extension CXComment {
 
         guard kind() == CXComment_Paragraph else {
             #if DEBUG
-                print("not a paragraph: \(kind())")
+
             #endif
             return []
         }
